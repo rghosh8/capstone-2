@@ -11,7 +11,7 @@ Pleural_Thickening; 14 Hernia)
 
 ### Background
 
-Although chest X-ray exam is one of the most frequent and cost-effective medical imaging examination,  clinical diagnosis of chest X-ray can be challenging. To achieve clinical accuracy on computer-aided detection and
+Although chest X-ray exam is one of the most frequent and cost-effective medical imaging examinations,  the clinical diagnosis of chest X-ray is often significantly challenging. To achieve clinical accuracy on computer-aided detection and
 diagnosis (CAD) in real world medical sites on chest X-rays is very
 difficult [1] where the performance deep neural networks for thorax disease recognition is
 severely limited by the availability of only 4143 frontal view images [2] (Openi is the previous
