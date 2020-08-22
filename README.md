@@ -1,4 +1,4 @@
-# Thorax Disease Classification Based on the X-Ray Data
+# Thorax Disease Classification based on the X-Ray Data
 
 
 ## Abstract
@@ -11,15 +11,21 @@ Pleural_Thickening; 14 Hernia)
 
 ### Background
 
-Although chest X-ray exam is one of the most frequent and cost-effective medical imaging examination,  clinical diagnosis of chest X-ray can be challenging, and
-Even some promising
-work have been reported in the past, and especially in recent deep learning work on
-Tuberculosis (TB) classification. To achieve clinically relevant computer-aided detection and
-diagnosis (CAD) in real world medical sites on all data settings of chest X-rays is still very
-difficult, if not impossible when only several thousands of images are employed for study. This is
-evident from [2] where the performance deep neural networks for thorax disease recognition is
-severely limited by the availability of only 4143 frontal view images [3] (Openi is the previous
+Although chest X-ray exam is one of the most frequent and cost-effective medical imaging examination,  clinical diagnosis of chest X-ray can be challenging. To achieve clinical accuracy on computer-aided detection and
+diagnosis (CAD) in real world medical sites on chest X-rays is very
+difficult [1] where the performance deep neural networks for thorax disease recognition is
+severely limited by the availability of only 4143 frontal view images [2] (Openi is the previous
 largest publicly available chest X-ray dataset to date).
+
+### Objective
+
+#### MVP
+
+Develop a binary classification model for the disease indentification
+
+#### Streach Goal
+
+Develop a multivariate classification model for the disease indentification
 
 ## Dataset and Exploratory Data Analysis
 
@@ -30,3 +36,9 @@ largest publicly available chest X-ray dataset to date).
 ## Discussion
 
 ## References
+
+[1] Hoo-chang Shin, Kirk Roberts, Le Lu, Dina Demner-Fushman, Jianhua Yao, Ronald M.
+Summers, Learning to Read Chest X-Rays: Recurrent Neural Cascade Model for Automated
+Image Annotation, IEEE CVPR, pp. 2497-2506, 2016
+
+[2] Open-i: An open access biomedical search engine. https://openi.nlm.nih.gov
