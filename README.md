@@ -17,6 +17,10 @@ difficult [1] where the performance deep neural networks for thorax disease reco
 severely limited by the availability of only 4143 frontal view images [2] (Openi is the previous
 largest publicly available chest X-ray dataset to date).
 
+### Data Source
+
+[Kaggle Link](https://www.kaggle.com/nih-chest-xrays/data)
+
 ### Objective
 
 #### MVP
