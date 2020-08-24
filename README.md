@@ -26,9 +26,10 @@ Demonstrate that you have looked at your data. What are your columns?
 * `keyword(str type)`: a particular keyword from the tweet (may be blank)
 * `target (int64 type)`: present in `train.csv` only, this denote whether the tweet is about a real disaster (`1`) or not (`0`)
 
-#### Presence of NaN
+#### EDA
 
-
+<b>Training Data<b>
+    
 ```
 Data columns (total 5 columns):
  #   Column    Non-Null Count  Dtype 
@@ -38,12 +39,26 @@ Data columns (total 5 columns):
  2   location  5080 non-null   object
  3   text      7613 non-null   object
  4   target    7613 non-null   int64 
-
 ```
 
-How many Nan's are there? Have you made a couple of plots? We only have a week for this capstone. It's very hard to do a good capstone when you've only had the real dataset for a couple of days. This can make it challenging to work with a company. Their timescale is different from the DSI. "Fast" for them is a couple of weeks. You needed the dataset yesterday.
+![](./images/ms_train.png)
+    
+---
+    
+Test Data
 
+```
+Data columns (total 4 columns):
+ #   Column    Non-Null Count  Dtype 
+---  ------    --------------  ----- 
+ 0   id        3263 non-null   int64 
+ 1   keyword   3237 non-null   object
+ 2   location  2158 non-null   object
+ 3   text      3263 non-null   object
+```
+![](./images/ms_test.png)    
 
+---
 
 ### Objective
 
