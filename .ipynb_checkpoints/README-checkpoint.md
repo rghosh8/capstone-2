@@ -14,21 +14,7 @@ The ubiquitous smartphones enables people to announce an emergency in real-time.
 
 ### Data Source
 
-The dataset used in the capstone is collected from this link: [Kaggle Link](https://www.kaggle.com/c/nlp-getting-started/data)
-
-Demonstrate that you have looked at your data. What are your columns?
-
-#### Columns
-
-* `id`: a unique identifier for each tweet
-* `text(str type)`: the test of the tweet
-* location()
-
-
-
-Are they numerical/catagorical? How many Nan's are there? Have you made a couple of plots? We only have a week for this capstone. It's very hard to do a good capstone when you've only had the real dataset for a couple of days. This can make it challenging to work with a company. Their timescale is different from the DSI. "Fast" for them is a couple of weeks. You needed the dataset yesterday.
-
-
+[Kaggle Link](https://www.kaggle.com/c/nlp-getting-started/data)
 
 ### Objective
 
