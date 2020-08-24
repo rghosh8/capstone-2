@@ -43,6 +43,7 @@ Data columns (total 5 columns):
 
 ![](./images/ms_train.png)
 ![](./images/target_dist.png)
+![](./images/avg_tweet_len.png)
     
 ---
     
