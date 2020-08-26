@@ -8,9 +8,6 @@ from nltk.stem.snowball import SnowballStemmer
 from nltk.stem.wordnet import WordNetLemmatizer
 import re
 
-def remove_urls(sent):
-    return re.sub('http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+','',sent)
-
 def list_corpus(lst):
     '''
         converts a list of string into corpus
@@ -23,10 +20,8 @@ def list_corpus(lst):
 
     corpus = []
     for item in lst:
-        item = remove_urls(item)
         tokenized = [word_tokenize(c.lower()) for c in item.split()]
-        docs = [[word for word in words if word not in stop and word not in punctuation_]
-                for words in tokenized]
+        docs = [[word for word in words if word not in stop and word not in punctuation_] for words in tokenized]
         docs=list(filter(lambda a: a != [], docs))
 
         string_ = ''
