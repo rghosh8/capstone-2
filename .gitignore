@@ -5,7 +5,6 @@ __pycache__/
 #ignore mac system file
 .DS_Store
 #ignore my data folder bc the data is really big and uploads slow
-data/
 figure/
 #ignore the files that VSCode makes
 .vscode
