@@ -186,18 +186,49 @@ Data columns (total 4 columns):
 
 #### MVP
 
-Build a deep learning model for this binary classification problem with reasonable accuracy.
+Build a learning model for this binary classification problem with reasonable accuracy.
 
-#### Streach Goal
 
-Try out different models and compare their performances
+## Feature Engineering
+    
+* Parse rich text data to extract urls and emojis
+* Set urls as string, url count, and emoji count as three new attributes
+* Tfidf vectorize the text atrribute with maxlength=500  
+* Count vectorize the location, keyword, and url for maxlength=100
 
-## Dataset and Exploratory Data Analysis
 
-## Methodology
+## Baseline Models
+    
+| Model    | Parameters  |  Accuracy |  Precision |  Recall   |  F1-Score    |
+|----------|-------------|-----------|------------|-----------|--------------|
+| Bernoulli Naive Bayes |  Default | 0.76 | 0.73 | 0.65 | 0.69 |
+| Random Forest Classifier |  max_depth=100   |   0.77 | 0.78 | 0.62 | 0.69 |
+| Gradient Boosting Classifier | learning_rate=0.001,min_sam_leaf=10, n_estimators=2000 | 0.7 | 0.84 | 0.33 | 0.47 |
+| XG Boost Classifier |learning_rate=0.1, n_estimators=140, max_depth=5 | 0.76| 0.8 | 0.57 | 0.67 |
 
-## Results
 
+## Grid Search on Gradient Boosting Classifier
+    
+```
+    parameters = {
+        "learning_rate": [0.001, 0.01, 0.1],
+        "subsample":[0.5, 0.75],
+        "n_estimators":[300, 900, 4500]
+    }
+    
+```
+    
+* best hypterparameters 
+ GradientBoostingClassifier(n_estimators=300, subsample=0.75))
+    
+* accuracy: 0.76
+* precision: 0.92
+* recall: 0.66
+    
+![](./images/gb_grid_search.png) 
+    
+* It seems more estimator is needed. 
+    
 ## Discussion
 
 
