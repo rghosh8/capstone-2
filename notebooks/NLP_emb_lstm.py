@@ -37,11 +37,11 @@ class NLP_emb_lstm(object):
 if __name__ == "__main__":
     train_df=pd.read_csv('../data/processed_train.csv')
     test_df=pd.read_csv('../data/processed_test.csv')
-    word_max_features=500
+    word_max_features=5000
     keyword_max_features=100
-    location_max_features=100
-    url_max_features=100
-    embedding_dim = 128
+    location_max_features=50
+    url_max_features=50
+    embedding_dim = 256
     train_X_augmented, test_X_augmented, train_target = train_test_augmented(train_df, \
         test_df, word_max_features, keyword_max_features, location_max_features, \
             url_max_features) 
