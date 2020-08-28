@@ -218,8 +218,7 @@ Build a learning model for this binary classification problem with reasonable ac
     
 ```
     
-* best hypterparameters 
- GradientBoostingClassifier(n_estimators=300, subsample=0.75))
+* best hypterparameters: GradientBoostingClassifier(n_estimators=300, subsample=0.75))
     
 * accuracy: 0.76
 * precision: 0.92
@@ -266,7 +265,7 @@ Build a learning model for this binary classification problem with reasonable ac
 ---
 * 65% accuracy 
     
-### Model 5 (Add deep output layer)
+### Model 5 (Add deep output layers)
 ![](./images/final_model.png)
 
     
