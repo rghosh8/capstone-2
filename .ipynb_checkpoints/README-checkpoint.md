@@ -234,7 +234,7 @@ Build a learning model for this binary classification problem with reasonable ac
     
 ### Model 1: Embedding Model -> garbage 
 <!-- ![](./images/first_model.png) -->
-<img src="./images/first_model.png" alt="first" title="" width="740" height="420" />
+<img src="./images/first_model.png" alt="first" title="" width="740" height="240" />
     
 * can't split classes (two very close probabilities)
 * output is negative
@@ -262,7 +262,8 @@ Build a learning model for this binary classification problem with reasonable ac
     
 ### Model 5 (Add deep output layers)
 
-![](./images/final_model.png)
+<!-- ![](./images/final_model.png) -->
+<img src="./images/final_model.png" alt="first" title="" width="740" height="240" />
 
 ---
 
