@@ -268,18 +268,18 @@ Build a learning model for this binary classification problem with reasonable ac
     
 ### Model 5 (Add deep output layer)
 ![](./images/final_model.png)
-<!-- <img src="./images/final_model.png" alt="first" title="" width="640" height="420" /> -->
+
     
 
 ## Lessons Learned
     
-    *  Start with a simple model
-    *  Minimize notebook usage
-    *  Get familiar with TensorFlow end-to-end
-    *  Perform EDA over the weekend
-    *  Minimize unknown risks
+    * Start with a simple model
+    * Minimize notebook usage
+    * Get familiar with TensorFlow end-to-end
+    * Perform EDA over the weekend
+    * Minimize unknown risks
     
 ## Next Steps
     
-    *  Tune exist models
-    *  Use BERT and other transfer learning frameworks
+    * Tune exist models
+    * Use BERT and other transfer learning frameworks
