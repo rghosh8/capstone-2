@@ -1,4 +1,4 @@
-#  True or False? Disaster Recognition from Tweets
+#  Twitter as a Disaster Sensor
 
 
 ## Abstract
@@ -234,14 +234,50 @@ Build a learning model for this binary classification problem with reasonable ac
 ![](./images/TensorBoard_Experiments.png)
     
 ### Model 1 (Embedding Model)
+<!-- ![](./images/first_model.png) -->
+<img src="./images/first_model.png" alt="first" title="" width="640" height="420" />
+    
+* can't split classes (two very close probabilities)
+* output is negative
     
 ### Model 2 (Embedding-LSTM Model)
 
-### Model 3 (Embedding-LSTM-Dense Output Model)
+<!-- ![](./images/model_land.png) -->
+<img src="./images/model_land.png" alt="first" title="" width="640" height="420" />
+* reduce the batch size to 20
+* by default, `tf.keras.layers.Dense` takes linear activation which does not make sense because we are dealing with a classification problem
+* model.compile(optimizer='adam',loss=tf.keras.losses.BinaryCrossentropy(~~from_logits=True~~),metrics=METRICS)
+* add `LSTM(100)` layer
+* drop conv layer
+---
+* 59% accuracy
+* Meaningful class resolution
+
+### Model 3 (Embedding-LSTM + Dense Output Model)
     
-### Model 4 (Embedding-LSTM-Dense More Features Model)
+<!-- ![](./images/model_land2.png) -->
+<img src="./images/model_land2.png" alt="first" title="" width="640" height="420" />
+* add a `model.add(Dense(500, activation='relu'))` layer before the output unit
+---
+* 62% accuracy
+        
+### Model 4 (Embedding-LSTM-Dense + More Features)
+* `word_max_features=5000, keyword_max_features=100, ocation_max_features=50, url_max_features=50, embedding_dim = 256`
+---
+* 65% accuracy 
     
-### Model 5 (Embedding-LSTM-Dense + More Features Model  + Denser Output Layer)
+### Model 5 (Add deep output layer)
+<!-- ![](./images/final_model.png) -->
+<img src="./images/final_model.png" alt="first" title="" width="640" height="420" />
     
 
-
+## Lessons Learned
+    * Start with a simple model
+    * Minimize notebook usage
+    * Get familiar with TensorFlow end-to-end
+    * Perform EDA over the weekend
+    * Minimize unknown risks
+    
+## Next Steps
+    * Tune exist models
+    * Use BERT and other transfer learning frameworks

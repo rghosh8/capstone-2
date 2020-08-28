@@ -11,9 +11,11 @@ class NLP_emb_lstm(object):
         self.target = target
         model = Sequential() 
         model.add(Embedding(400, embedding_dim))
-        model.add(LSTM(100)) 
-#         model.add(GlobalAveragePooling1D())
-        model.add(Dense(500, activation='relu')) 
+#         model.add(LSTM(500)) 
+        model.add(GlobalAveragePooling1D())
+#         model.add(Dense(500, activation='relu'))
+#         model.add(Dense(100, activation='relu'))
+#         model.add(Dense(50, activation='relu'))
         model.add(Dense(1, activation='sigmoid')) 
         
         print(model.summary())

@@ -1,8 +1,9 @@
+import pandas as pd
 import tensorflow as tf
 from tensorflow.keras import layers
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, LSTM, Activation, Embedding, GlobalAveragePooling1D
-
+from sklearn_pipeline import *
 
 class NLP_emb_lstm(object):
     def __init__(self, att, target, embedding_dim):
@@ -10,9 +11,11 @@ class NLP_emb_lstm(object):
         self.target = target
         model = Sequential() 
         model.add(Embedding(400, embedding_dim))
-        model.add(LSTM(100)) 
-#         model.add(GlobalAveragePooling1D())
-        model.add(Dense(500, activation='relu')) 
+#         model.add(LSTM(500)) 
+        model.add(GlobalAveragePooling1D())
+#         model.add(Dense(500, activation='relu'))
+#         model.add(Dense(100, activation='relu'))
+#         model.add(Dense(50, activation='relu'))
         model.add(Dense(1, activation='sigmoid')) 
         
         print(model.summary())
@@ -25,36 +28,26 @@ class NLP_emb_lstm(object):
 
         self.model = model
     
-    def fit(self):
+    def fit(self, size_batch, no_epoch):
         tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir="./logs")
-        history_augmented = self.model.fit(self.att, self.target, verbose=1, batch_size = 16, epochs = 1, validation_split=0.2,
+        history_augmented = self.model.fit(self.att, self.target, verbose=1, batch_size = size_batch, epochs = no_epoch, validation_split=0.2,
                    shuffle=True, callbacks=[tensorboard_callback])
         
         return history_augmented
 
 
-    
-#     model = 
-#     model = tf.keras.Sequential([
-#       layers.Embedding(max_features + 1, embedding_dim),
-#       layers.Dropout(0.2),
-#       layers.GlobalAveragePooling1D(),
-#       layers.Dropout(0.2),
-#       layers.Dense(1, activation='sigmoid')])
+if __name__ == "__main__":
+    train_df=pd.read_csv('../data/processed_train.csv')
+    test_df=pd.read_csv('../data/processed_test.csv')
+    word_max_features=5000
+    keyword_max_features=100
+    location_max_features=50
+    url_max_features=50
+    embedding_dim = 256
+    train_X_augmented, test_X_augmented, train_target = train_test_augmented(train_df, \
+        test_df, word_max_features, keyword_max_features, location_max_features, \
+            url_max_features) 
 
-#     METRICS = [
-#                 tf.metrics.BinaryAccuracy(name='ACCURACY')]
-#                 tf.metrics.Precision(name='PRECISION'),
-#                 tf.metrics.Recall(name='RECALL'),
-#                 tf.metrics.AUC(name='AUC'),
-#                 tf.metrics.TruePositives(name='TP'),
-#                 tf.metrics.TrueNegatives(name='TN'),
-#                 tf.metrics.FalsePositives(name='FP'),
-#                 tf.metrics.FalseNegatives(name='FN')]
+    embedding_model =  NLP_emb_lstm(train_X_augmented, train_target.values, embedding_dim) 
 
-#     model.compile(loss='binary_crossentropy', 
-#                   optimizer='adam', 
-#                   metrics=METRICS)
-
-#     return model
- 
+    embedding_model.fit(16, 10)
