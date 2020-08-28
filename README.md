@@ -263,7 +263,7 @@ Build a learning model for this binary classification problem with reasonable ac
 ### Model 5 (Add deep output layers)
 
 <!-- ![](./images/final_model.png) -->
-<img src="./images/final_model.png" alt="first" title="" width="740" height="240" />
+<img src="./images/final_model.png" alt="first" title="" width="740" height="360" />
 
 ---
 
