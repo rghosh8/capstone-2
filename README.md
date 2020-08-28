@@ -258,7 +258,7 @@ Build a learning model for this binary classification problem with reasonable ac
 
         
 ### Model 4: Embedding-LSTM-Dense + More Features -> 65% accuracy 
-* `word_max_features=5000, keyword_max_features=100, ocation_max_features=50, url_max_features=50, embedding_dim = 256`
+*  `word_max_features=5000, keyword_max_features=100, ocation_max_features=50, url_max_features=50, embedding_dim = 256`
 ---
     
 ### Model 5 (Add deep output layers)
@@ -267,13 +267,13 @@ Build a learning model for this binary classification problem with reasonable ac
 
 ## Lessons Learned
     
-    * Start with a simple model
-    * Minimize notebook usage
-    * Get familiar with TensorFlow end-to-end
-    * Perform EDA over the weekend
-    * Minimize unknown risks
+    *  Start with a simple model
+    *  Minimize notebook usage
+    *  Get familiar with TensorFlow end-to-end
+    *  Perform EDA over the weekend
+    *  Minimize unknown risks
     
 ## Next Steps
     
-    * Tune exist models
-    * Use BERT and other transfer learning frameworks
+    *  Tune exist models
+    *  Use BERT and other transfer learning frameworks
