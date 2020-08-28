@@ -272,6 +272,7 @@ Build a learning model for this binary classification problem with reasonable ac
     
 
 ## Lessons Learned
+    
     * Start with a simple model
     * Minimize notebook usage
     * Get familiar with TensorFlow end-to-end
@@ -279,5 +280,6 @@ Build a learning model for this binary classification problem with reasonable ac
     * Minimize unknown risks
     
 ## Next Steps
+    
     * Tune exist models
     * Use BERT and other transfer learning frameworks
