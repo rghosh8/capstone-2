@@ -28,7 +28,7 @@ Demonstrate that you have looked at your data. What are your columns?
 
 #### EDA
 
-<b>Training Data<b>
+Training Data
     
 ```
 Data columns (total 5 columns):
