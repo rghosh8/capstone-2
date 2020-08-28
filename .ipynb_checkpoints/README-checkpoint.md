@@ -234,16 +234,16 @@ Build a learning model for this binary classification problem with reasonable ac
 ![](./images/TensorBoard_Experiments.png)
     
 ### Model 1 (Embedding Model)
-<!-- ![](./images/first_model.png) -->
-<img src="./images/first_model.png" alt="first" title="" width="640" height="420" />
+![](./images/first_model.png)
+<!-- <img src="./images/first_model.png" alt="first" title="" width="640" height="420" /> -->
     
 * can't split classes (two very close probabilities)
 * output is negative
     
 ### Model 2 (Embedding-LSTM Model)
 
-<!-- ![](./images/model_land.png) -->
-<img src="./images/model_land.png" alt="first" title="" width="640" height="420" />
+![](./images/model_land.png)
+<!-- <img src="./images/model_land.png" alt="first" title="" width="640" height="420" /> -->
 * reduce the batch size to 20
 * by default, `tf.keras.layers.Dense` takes linear activation which does not make sense because we are dealing with a classification problem
 * model.compile(optimizer='adam',loss=tf.keras.losses.BinaryCrossentropy(~~from_logits=True~~),metrics=METRICS)
@@ -255,8 +255,8 @@ Build a learning model for this binary classification problem with reasonable ac
 
 ### Model 3 (Embedding-LSTM + Dense Output Model)
     
-<!-- ![](./images/model_land2.png) -->
-<img src="./images/model_land2.png" alt="first" title="" width="640" height="420" />
+![](./images/model_land2.png)
+<!-- <img src="./images/model_land2.png" alt="first" title="" width="640" height="420" /> -->
 * add a `model.add(Dense(500, activation='relu'))` layer before the output unit
 ---
 * 62% accuracy
@@ -267,8 +267,8 @@ Build a learning model for this binary classification problem with reasonable ac
 * 65% accuracy 
     
 ### Model 5 (Add deep output layer)
-<!-- ![](./images/final_model.png) -->
-<img src="./images/final_model.png" alt="first" title="" width="640" height="420" />
+![](./images/final_model.png)
+<!-- <img src="./images/final_model.png" alt="first" title="" width="640" height="420" /> -->
     
 
 ## Lessons Learned
