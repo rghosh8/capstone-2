@@ -232,14 +232,14 @@ Build a learning model for this binary classification problem with reasonable ac
     
 ![](./images/TensorBoard_Experiments.png)
     
-### Model 1 (Embedding Model)
+### Model 1: Embedding Model -> garbage 
 ![](./images/first_model.png)
 <!-- <img src="./images/first_model.png" alt="first" title="" width="640" height="420" /> -->
     
 * can't split classes (two very close probabilities)
 * output is negative
     
-### Model 2 (Embedding-LSTM Model)
+### Model 2: Embedding-LSTM Model -> 59% accuracy
 
 ![](./images/model_land.png)
 <!-- <img src="./images/model_land.png" alt="first" title="" width="640" height="420" /> -->
@@ -248,27 +248,22 @@ Build a learning model for this binary classification problem with reasonable ac
 * model.compile(optimizer='adam',loss=tf.keras.losses.BinaryCrossentropy(~~from_logits=True~~),metrics=METRICS)
 * add `LSTM(100)` layer
 * drop conv layer
----
-* 59% accuracy
-* Meaningful class resolution
 
-### Model 3 (Embedding-LSTM + Dense Output Model)
+
+### Model 3: Embedding-LSTM + Dense Output Model -> 62% accuracy
     
 ![](./images/model_land2.png)
 <!-- <img src="./images/model_land2.png" alt="first" title="" width="640" height="420" /> -->
 * add a `model.add(Dense(500, activation='relu'))` layer before the output unit
----
-* 62% accuracy
+
         
-### Model 4 (Embedding-LSTM-Dense + More Features)
+### Model 4: Embedding-LSTM-Dense + More Features -> 65% accuracy 
 * `word_max_features=5000, keyword_max_features=100, ocation_max_features=50, url_max_features=50, embedding_dim = 256`
 ---
-* 65% accuracy 
     
 ### Model 5 (Add deep output layers)
 ![](./images/final_model.png)
-
-    
+  
 
 ## Lessons Learned
     
