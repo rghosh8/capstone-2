@@ -232,7 +232,7 @@ Build a learning model for this binary classification problem with reasonable ac
     
 ![](./images/TensorBoard_Experiments.png)
     
-### Model 1: Embedding Model -> garbage 
+### Model 1: Embedding Model -> poor 
 <!-- ![](./images/first_model.png) -->
 <img src="./images/first_model.png" alt="first" title="" width="740" height="240" />
     
