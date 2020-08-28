@@ -229,6 +229,19 @@ Build a learning model for this binary classification problem with reasonable ac
     
 * It seems more estimator is needed. 
     
-## Discussion
+## Experiments with Deep Learning
+    
+![](./images/TensorBoard_Experiments.png)
+    
+### Model 1 (Embedding Model)
+    
+### Model 2 (Embedding-LSTM Model)
+
+### Model 3 (Embedding-LSTM-Dense Output Model)
+    
+### Model 4 (Embedding-LSTM-Dense More Features Model)
+    
+### Model 5 (Embedding-LSTM-Dense + More Features Model  + Denser Output Layer)
+    
 
 
