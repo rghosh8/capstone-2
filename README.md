@@ -260,7 +260,7 @@ Build a learning model for this binary classification problem with reasonable ac
 ### Model 4: Embedding-LSTM-Dense + More Features -> 65% accuracy 
 *  `word_max_features=5000, keyword_max_features=100, ocation_max_features=50, url_max_features=50, embedding_dim = 256`
     
-### Model 5: Add deep output layers -> Under Progress
+### Model 5: Add deep output layers -> 62.5% accuracy
 
 <!-- ![](./images/final_model.png) -->
 <img src="./images/final_model.png" alt="first" title="" width="740" height="360" />
