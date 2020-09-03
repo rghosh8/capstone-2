@@ -10,11 +10,11 @@ class NLP_emb_lstm(object):
         self.att = att
         self.target = target
         model = Sequential() 
-        model.add(Embedding(400, embedding_dim))
-#         model.add(LSTM(500)) 
-        model.add(GlobalAveragePooling1D())
+        model.add(Embedding(5000, embedding_dim))
+        model.add(LSTM(50)) 
+#        model.add(GlobalAveragePooling1D())
 #         model.add(Dense(500, activation='relu'))
-#         model.add(Dense(100, activation='relu'))
+        model.add(Dense(100, activation='relu'))
 #         model.add(Dense(50, activation='relu'))
         model.add(Dense(1, activation='sigmoid')) 
         
@@ -43,11 +43,11 @@ if __name__ == "__main__":
     keyword_max_features=100
     location_max_features=50
     url_max_features=50
-    embedding_dim = 256
+    embedding_dim = 2048
     train_X_augmented, test_X_augmented, train_target = train_test_augmented(train_df, \
         test_df, word_max_features, keyword_max_features, location_max_features, \
             url_max_features) 
 
     embedding_model =  NLP_emb_lstm(train_X_augmented, train_target.values, embedding_dim) 
 
-    embedding_model.fit(16, 10)
+    embedding_model.fit(100, 100)
